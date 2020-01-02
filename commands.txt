@@ -1,0 +1,9 @@
+---If you are using Python3 than you don't have to install virtual environment
+---Create a project folder and a venv folder within:
+            $ python3 -m venv venv
+--If you needed to install virtualenv because you are on an older version of Python, use the following command instead:
+             $ virtualenv venv
+--Activate the environment
+             $ . venv/bin/activate
+---Within the activated environment, use the following command to install Djagno:
+       $ pip install django

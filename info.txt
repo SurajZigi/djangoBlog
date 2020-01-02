@@ -1,0 +1,16 @@
+base : manage.py allow us to run command line commands
+djnago_project: our project file
+   __init__.py:-- an empty file tells it's a python package
+   settings.py:-- where we change setting and configuration
+                  securty 
+                  debug
+                  installed app
+                  database
+                  internationalization
+    urls.py:-- where we set the mapping of urls
+    wsgi.py:-- how to python web server and web application communicate
+
+
+    migration:-- 
+
+    

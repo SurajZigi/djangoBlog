@@ -7,3 +7,6 @@
              $ . venv/bin/activate
 ---Within the activated environment, use the following command to install Djagno:
        $ pip install django
+----- start project 
+     $ django-admin startproject project_name
+     

@@ -99,3 +99,7 @@ from django.contrib.auth.forms import UserCreationForm
 __---------------##########
 is authenticated checks is user is logged in or not
 add it to base.html/layout.html
+
+------------###########
+ <h1>{{ user.username }}</h1>
+ IT TELLS ABOUT THE CURRENT LOGGED IN USER

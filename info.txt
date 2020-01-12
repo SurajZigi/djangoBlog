@@ -11,6 +11,87 @@ djnago_project: our project file
     wsgi.py:-- how to python web server and web application communicate
 
 
-    migration:-- 
+---migration:-- 
+allows us to apply changes to a database 
+python manage.py makemigrations changes to 
+python manage.py migrate first time
 
-    
+
+
+empty route follows the emptu route
+path('', include('blog.urls')),
+main url to app url
+path('', views.home, name='blog-home'),
+
+
+----%%%
+whenever registers the app goto application app.py and copy the appconfig and register it on the setting.py 
+ BlogConfig from the blog app.py
+
+ create super user
+ $ Python manage.py createsuperuser
+ staff user can login in admin panel
+ super user user has all permissions 
+ active user should or deleted 
+
+ ___ORM
+   WE CAN use our database in object oriented way, & CAN USE DIFFERENT DATABASE WITHOUT CHANGING OUR CODE
+   in djagno we can represent our database structure as classes
+---- to check database which is created using orm in Sql form 
+app_name and migration number
+$ python manage.py sqlmigrate blog 0001
+
+-----working on django shell
+ $  mayank$ python manage.py shell
+ >>> from blog.models import Post
+>>> from django.contrib.auth.models import User
+>>> from django.contrib.auth.models import User
+>>> User.objects.all()
+        <QuerySet [<User: Zigi>]>
+first user
+>>> User.objects.first()
+>>>Users.object.last()
+>>>User.object.filter(Username='Zigi')
+>>>User.object.filter(Username='Zigi').first()
+to grab in a variable
+>>>user = User.object.filter(Username='Zigi').first()
+>>> user
+
+
+
+>>>post.object.all()
+>>>post_1 = Post(title='Blog 1',content = 'First Post', author = user)
+
+dunder str method (__)
+
+>>> from blog.models import Post
+>>> from django.contrib.auth.models import User
+>>> Post.objects.all()
+<QuerySet []>
+>>> 
+add new post
+>>> post_2 = Post(title='Blog 2',content = 'secont blog contetn', author_id = user.id)
+>>>post_2.save()
+>>>post.objects.all()
+
+naming convention django
+>>>user.post_set
+>>>user.post_set.all()
+
+
+######______******
+to register model to view on adming panel go to app admin.py and add modle there to 
+from .models import Post
+
+# Register your models here.
+
+admin.site.register(Post) 
+
+-------@@@@@@@@@@@@@@@---------
+Django provides user creation form so import it using
+
+on views.py of user app
+
+from django.contrib.auth.forms import UserCreationForm
+----- to render form in paragraph form
+  {{ form.as_p }}

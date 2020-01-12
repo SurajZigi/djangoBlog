@@ -120,3 +120,18 @@ add it to base.html/layout.html
 200
 >>> user.profile.image.url
 'profile_pics/0.jpeg'
+
+*******######
+media root to main urls.py to view profile and images add 
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    # ... the rest of your URLconf goes here ...
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+modified url section to 
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+   

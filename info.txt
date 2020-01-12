@@ -103,3 +103,8 @@ add it to base.html/layout.html
 ------------###########
  <h1>{{ user.username }}</h1>
  IT TELLS ABOUT THE CURRENT LOGGED IN USER
+
+ ##########
+   to show any model on admin panel add that model to admin.py file in the same app 
+  ###############
+  

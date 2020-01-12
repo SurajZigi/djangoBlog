@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate, login as auth_login
 from .forms import UserRegisterForm
 from django.contrib import messages
 

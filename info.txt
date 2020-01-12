@@ -95,3 +95,7 @@ on views.py of user app
 from django.contrib.auth.forms import UserCreationForm
 ----- to render form in paragraph form
   {{ form.as_p }}
+
+__---------------##########
+is authenticated checks is user is logged in or not
+add it to base.html/layout.html

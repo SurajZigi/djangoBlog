@@ -11,4 +11,8 @@
      $ django-admin startproject project_name
 
 ---------****** create first project
-        $ python manage.py startapp appname       
+        $ python manage.py startapp appname  
+     -------*************
+     media directories to set media save directories uploaded file located on the system
+     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL= '/media/'     

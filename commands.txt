@@ -9,4 +9,6 @@
        $ pip install django
 ----- start project 
      $ django-admin startproject project_name
-     
+
+---------****** create first project
+        $ python manage.py startapp appname       

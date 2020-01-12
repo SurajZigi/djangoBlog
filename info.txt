@@ -107,4 +107,16 @@ add it to base.html/layout.html
  ##########
    to show any model on admin panel add that model to admin.py file in the same app 
   ###############
-  
+  python manage.py shell
+  >>> from django.contrib.auth.models import User
+  >>> user = User.objects.filter(username='Zigi').first()
+  >>> user
+  <User: Zigi>
+>>> user.profile
+<Profile: Zigi Profile>
+>>> user.profile.image
+<ImageFieldFile: profile_pics/0.jpeg>
+>>> user.profile.image.width
+200
+>>> user.profile.image.url
+'profile_pics/0.jpeg'

@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from PIL import Image
 
-# Create your models here.
+# Create your models here.s
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
@@ -12,10 +12,10 @@ class Profile(models.Model):
         return f'{ self.user.username } Profile'
     #image resize
     
-    def save(self): 
-        super().save()
-
-
+    def save(self, *args, **kwargs): 
+        super(Profile, self).save(*args, **kwargs)#save issue resolved
+        
+        
         img = Image.open(self.image.path)
 
         if img.height > 300 or img.width > 300:

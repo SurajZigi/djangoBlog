@@ -15,11 +15,9 @@ def home(request):
 class PostListView(ListView):
     model  = Post
     template_name = 'blog/home.html'
-    context_object_name ='posts'
-    
+    context_object_name ='posts' 
+    ordering = ['-date_psoted']
     #<app>/<model>_<viewtype>.html 
-
-
 
 def about(request):
      return render(request, 'blog/about.html')

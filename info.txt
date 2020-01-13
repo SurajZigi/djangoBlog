@@ -139,3 +139,14 @@ if settings.DEBUG:
 #########
  image saving in background set this to 
    <enctype="multipart/form-data">
+
+
+#####views 
+url>view.py>function the render >template
+## class base views>lot built in functonionality to handle backend logic
+class base view>
+  list view -- youtube<>subsctiption
+  detail view ---- comment
+  create
+  update view---- update and delete view
+

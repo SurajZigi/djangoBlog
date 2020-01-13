@@ -134,4 +134,8 @@ urlpatterns = [
 modified url section to 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-   
+    
+
+#########
+ image saving in background set this to 
+   <enctype="multipart/form-data">

@@ -149,4 +149,5 @@ class base view>
   detail view ---- comment
   create
   update view---- update and delete view
-
+##############
+LoginRequiredMixin to login required to post this added and passed with create view

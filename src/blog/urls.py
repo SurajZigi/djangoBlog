@@ -1,5 +1,11 @@
 from django.urls import path
-from .views import PostListView, PostDetailView, PostCreateView, PostUpdateView
+from .views import (
+    PostListView, 
+    PostDetailView, 
+    PostCreateView, 
+    PostUpdateView,
+    PostDeleteView
+)
 # Create your views here.
 from . import views
 
@@ -8,6 +14,7 @@ urlpatterns = [
     path('post/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
     path('post/new/', PostCreateView.as_view(), name='post-create'),
     path('post/<int:pk>/update/', PostCreateView.as_view(), name='post-update'),
+    path('post/<int:pk>/delete/', PostDeleteView.as_view(), name='post-delete'),
     path('about/', views.about, name='blog-about'),
  ]
 #<app>/<model>_<viewtype>.html 

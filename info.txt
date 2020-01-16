@@ -1,4 +1,11 @@
 ######For osx users you can use sudo lsof -t -i tcp:8000 | xargs kill -9
+********to Nano.BashProfile add to set password hidden
+import os 
+db_user = os.environ.get('DB_USER')
+db_password = os.environ.get('DB_PASS')
+
+print(db_user)
+print(db_password)
 
 base : manage.py allow us to run command line commands
 djnago_project: our project file

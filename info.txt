@@ -1,3 +1,5 @@
+######For osx users you can use sudo lsof -t -i tcp:8000 | xargs kill -9
+
 base : manage.py allow us to run command line commands
 djnago_project: our project file
    __init__.py:-- an empty file tells it's a python package

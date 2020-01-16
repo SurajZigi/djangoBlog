@@ -25,7 +25,7 @@ class PostListView(ListView):
     model  = Post
     template_name = 'blog/home.html'
     context_object_name ='posts' 
-    ordering = ['-date_psoted']
+    ordering = ['-date_posted']
     paginate_by = 5
     #<app>/<model>_<viewtype>.html 
 
@@ -57,7 +57,7 @@ class PostUpdateView(LoginRequiredMixin,UserPassesTestMixin, UpdateView):
         return False
          
 class PostDeleteView(LoginRequiredMixin, DeleteView):
-    model  = Post
+    model = Post
     success_url = '/'
      
     def test_func(self):
@@ -67,7 +67,7 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
         return False
 
 class UserPostListView(ListView):
-    model  = Post
+    model = Post
     template_name = 'blog/user_post.html'
     context_object_name ='posts' 
     paginate_by = 5

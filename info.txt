@@ -167,3 +167,6 @@ LoginRequiredMixin to login required to post this added and passed with create v
 ...     post = Post(title=post['title'],content=post['content'],author_id=post['user_id'])
 ...     post.save()
 ... 
+
+#### posword reset
+1- password-reset: url is added  

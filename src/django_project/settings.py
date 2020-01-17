@@ -131,8 +131,9 @@ LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'smtp.yahoo.com'
 EMAIL_PORT = 587
 EMAIL_USE_TSL = True
-EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
+EMAIL_USE_SSL = False
+EMAIL_HOST_USER = 'surajknite@yahoo.com'
+EMAIL_HOST_PASSWORD = 'vkwlvqgtmpsdobok'

@@ -13,7 +13,7 @@ class Profile(models.Model):
     #image resize
     
     def save(self, *args, **kwargs): 
-        super(Profile, self).save(*args, **kwargs)#save issue resolved
+        super().save(*args, **kwargs)#save issue resolved
         
         
         img = Image.open(self.image.path)

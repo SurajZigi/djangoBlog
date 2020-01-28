@@ -1,0 +1,17 @@
+webaappreques>dns>ipserver>markup>Fetchup>website
+html>css>javascript> where to send what data Backend python php
+wsgi :- web server gateway 
+
+django-admin to see all commands
+**1
+Django routes
+views.py & url 
+url>path('',views.index, name='index')
+new>view>from django.http import HttpReuest
+    def index(request):
+        return HttpResponse("hello")
+-----#2
+    url>path('about',views.about, name='about')
+    new>view>from django.http import HttpReuest
+        def about(request):
+            return HttpResponse("it's about Page")
